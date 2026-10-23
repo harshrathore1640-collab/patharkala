@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%">
+  <defs>
+    <linearGradient id="goldStoneGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7d488"/>
+      <stop offset="40%" stop-color="#dfa543"/>
+      <stop offset="80%" stop-color="#b87b22"/>
+      <stop offset="100%" stop-color="#8a5611"/>
+    </linearGradient>
+    <linearGradient id="desertBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2a1f10"/>
+      <stop offset="50%" stop-color="#18120a"/>
+      <stop offset="100%" stop-color="#0a0805"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring -->
+  <circle cx="100" cy="100" r="95" fill="url(#desertBg)" stroke="url(#goldStoneGrad)" stroke-width="2.5"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="rgba(223, 165, 67, 0.45)" stroke-width="1" stroke-dasharray="3 3"/>
+  <circle cx="100" cy="100" r="74" fill="none" stroke="url(#goldStoneGrad)" stroke-width="1.5"/>
+
+  <!-- Golden Sun Rising over Jaisalmer Fort -->
+  <circle cx="100" cy="72" r="22" fill="url(#goldStoneGrad)" opacity="0.35"/>
+  <circle cx="100" cy="72" r="16" fill="url(#goldStoneGrad)" opacity="0.8"/>
+
+  <!-- Jaisalmer Fort Ramparts / Haveli Jharokha Silhouettes -->
+  <g fill="url(#goldStoneGrad)">
+    <!-- Sand Dunes -->
+    <path d="M 32 120 Q 65 105 100 118 Q 135 130 168 115 L 168 135 L 32 135 Z" opacity="0.5"/>
+    <path d="M 32 125 Q 75 135 100 126 Q 140 115 168 128 L 168 135 L 32 135 Z"/>
+
+    <!-- Fort Bastions & Chhatri Silhouette -->
+    <!-- Center Chhatri -->
+    <path d="M 94 92 C 94 82, 106 82, 106 92 Z"/>
+    <rect x="96" y="92" width="8" height="18"/>
+    <!-- Fort Bastions -->
+    <path d="M 68 102 L 72 96 L 76 96 L 78 102 L 84 102 L 86 98 L 90 98 L 92 102 L 108 102 L 110 98 L 114 98 L 116 102 L 122 102 L 124 96 L 128 96 L 132 102 Z"/>
+    
+    <!-- Camel Silhouette in Desert -->
+    <!-- Body & hump -->
+    <ellipse cx="62" cy="116" rx="6" ry="4"/>
+    <circle cx="62" cy="112" r="2.8"/>
+    <!-- Neck & head -->
+    <path d="M 66 116 Q 70 112 70 108 L 72 107" stroke="url(#goldStoneGrad)" stroke-width="1.8" fill="none"/>
+    <!-- Legs -->
+    <path d="M 58 119 L 58 126 M 60 119 L 61 126 M 64 119 L 63 126 M 66 119 L 67 126" stroke="url(#goldStoneGrad)" stroke-width="1.2"/>
+  </g>
+
+  <!-- Circular Text Paths -->
+  <path id="textPathTop" d="M 26,100 A 74,74 0 1,1 174,100" fill="none"/>
+  <path id="textPathBottom" d="M 174,100 A 74,74 0 0,1 26,100" fill="none"/>
+
+  <text font-family="'Cinzel', 'Outfit', sans-serif" font-size="9" font-weight="700" letter-spacing="3" fill="url(#goldStoneGrad)">
+    <textPath href="#textPathTop" startOffset="50%" text-anchor="middle">
+      PATHAR KALAA
+    </textPath>
+  </text>
+  
+  <text font-family="'Plus Jakarta Sans', sans-serif" font-size="7.5" font-weight="600" letter-spacing="2" fill="#ffffff" opacity="0.85">
+    <textPath href="#textPathBottom" startOffset="50%" text-anchor="middle">
+      JAISALMER STONE • 06350200339
+    </textPath>
+  </text>
+</svg>
